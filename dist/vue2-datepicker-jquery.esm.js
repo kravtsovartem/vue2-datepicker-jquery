@@ -1,49 +1,72 @@
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+const $ = window.jQuery;
 var script = {
-  name: 'Vue2DatepickerJquery',
-
-  // vue component name
-  data() {
-    return {
-      counter: 5,
-      initCounter: 5,
-      message: {
-        action: null,
-        amount: null
-      }
-    };
-  },
-
-  computed: {
-    changedBy() {
-      var _message$amount;
-
-      const {
-        message
-      } = this;
-      if (!message.action) return 'initialized';
-      return `${message === null || message === void 0 ? void 0 : message.action} ${(_message$amount = message.amount) !== null && _message$amount !== void 0 ? _message$amount : ''}`.trim();
+  name: 'date-picker',
+  props: {
+    value: {
+      type: String,
+      default: new Date().toLocaleDateString()
+    },
+    'date-format': {
+      type: String,
+      default: 'dd.mm.yy'
+    },
+    'change-month': {
+      type: Boolean,
+      default: false
+    },
+    'change-year': {
+      type: Boolean,
+      default: false
+    },
+    'first-day': {
+      type: Number,
+      default: 1
     }
-
+  },
+  mounted: function () {
+    $.datepicker.regional['ru'] = {
+      closeText: 'Закрыть',
+      prevText: 'Пред',
+      nextText: 'След',
+      monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+      monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+      dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+      dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+      dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+      weekHeader: 'Нед',
+      dateFormat: this.dateFormat,
+      firstDay: this.firstDay,
+      changeMonth: this.changeMonth,
+      changeYear: this.changeYear
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+    $(this.$refs.jquery_date_picker).datepicker({
+      onSelect: date => {
+        this.$emit('input', date);
+      }
+    });
+    $(this.$refs.jquery_date_picker).datepicker('setDate', this.value);
+  },
+  beforeDestroy: function () {
+    $(this.$refs.jquery_date_picker).datepicker('hide').datepicker('destroy');
   },
   methods: {
-    increment(arg) {
-      const amount = typeof arg !== 'number' ? 1 : arg;
-      this.counter += amount;
-      this.message.action = 'incremented by';
-      this.message.amount = amount;
-    },
-
-    decrement(arg) {
-      const amount = typeof arg !== 'number' ? 1 : arg;
-      this.counter -= amount;
-      this.message.action = 'decremented by';
-      this.message.amount = amount;
-    },
-
-    reset() {
-      this.counter = this.initCounter;
-      this.message.action = 'reset';
-      this.message.amount = null;
+    clearDate() {
+      this.$emit('input', '');
     }
 
   }
@@ -188,33 +211,22 @@ var __vue_render__ = function () {
 
   var _c = _vm._self._c || _h;
 
-  return _c('div', {
-    staticClass: "vue2-datepicker-jquery"
-  }, [_c('p', [_vm._v("The counter was " + _vm._s(_vm.changedBy) + " to "), _c('b', [_vm._v(_vm._s(_vm.counter))]), _vm._v(".")]), _vm._v(" "), _c('button', {
-    on: {
-      "click": _vm.increment
+  return _c('span', {
+    staticClass: "jquery_date_picker"
+  }, [_c('input', {
+    ref: "jquery_date_picker",
+    attrs: {
+      "type": "text"
+    },
+    domProps: {
+      "value": _vm.value
     }
-  }, [_vm._v("\n    Click +1\n  ")]), _vm._v(" "), _c('button', {
+  }), _vm._v(" "), _c('span', {
+    staticClass: "jquery_date_picker__close",
     on: {
-      "click": _vm.decrement
+      "click": _vm.clearDate
     }
-  }, [_vm._v("\n    Click -1\n  ")]), _vm._v(" "), _c('button', {
-    on: {
-      "click": function ($event) {
-        return _vm.increment(5);
-      }
-    }
-  }, [_vm._v("\n    Click +5\n  ")]), _vm._v(" "), _c('button', {
-    on: {
-      "click": function ($event) {
-        return _vm.decrement(5);
-      }
-    }
-  }, [_vm._v("\n    Click -5\n  ")]), _vm._v(" "), _c('button', {
-    on: {
-      "click": _vm.reset
-    }
-  }, [_vm._v("\n    Reset\n  ")])]);
+  }, [_vm._v("X")])]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -222,8 +234,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-7cd90bd3_0", {
-    source: ".vue2-datepicker-jquery[data-v-7cd90bd3]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.vue2-datepicker-jquery p[data-v-7cd90bd3]{margin:0 0 1em}",
+  inject("data-v-0c1c7b83_0", {
+    source: ".jquery_date_picker[data-v-0c1c7b83]{position:relative}.jquery_date_picker__close[data-v-0c1c7b83]{position:absolute;right:10px;cursor:pointer}",
     map: undefined,
     media: undefined
   });
@@ -231,7 +243,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-7cd90bd3";
+const __vue_scope_id__ = "data-v-0c1c7b83";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

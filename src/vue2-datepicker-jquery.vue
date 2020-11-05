@@ -40,6 +40,7 @@ export default {
     }
   },
   mounted: function () {
+
     $.datepicker.regional['ru'] = {
       closeText: 'Закрыть',
       prevText: 'Пред',

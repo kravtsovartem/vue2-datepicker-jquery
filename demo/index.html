@@ -7,10 +7,18 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
-		<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
-		<script type="text/javascript" src="/vue2-datepicker-jquery/vue2-datepicker-jquery.min.js"></script>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript" src="../dist/vue2-datepicker-jquery.min.js"></script>
 	</head>
   <body>
-		<vue2-datepicker-jquery/>
+		<div id="app">
+			<vue2-datepicker-jquery></vue2-datepicker-jquery>
+		</div>
+		
+		<script>
+			new Vue({
+				el: "#app"
+			})
+		</script>
   </body>
 </html>
