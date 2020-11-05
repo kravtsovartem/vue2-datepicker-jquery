@@ -13,8 +13,6 @@
 </template>
 
 <script>
-const $ = window.jQuery
-
 export default {
   name: 'date-picker',
   props: {

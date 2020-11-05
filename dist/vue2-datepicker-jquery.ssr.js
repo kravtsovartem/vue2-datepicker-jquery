@@ -12,7 +12,6 @@
 //
 //
 //
-var $ = window.jQuery;
 var script = {
   name: 'date-picker',
   props: {
@@ -197,7 +196,7 @@ var __vue_render__ = function __vue_render__() {
 
   return _c('span', {
     staticClass: "jquery_date_picker"
-  }, [_vm._ssrNode("<input type=\"text\"" + _vm._ssrAttr("value", _vm.value) + " data-v-0c1c7b83> <span class=\"jquery_date_picker__close\" data-v-0c1c7b83>X</span>")]);
+  }, [_vm._ssrNode("<input type=\"text\"" + _vm._ssrAttr("value", _vm.value) + " data-v-39a1f793> <span class=\"jquery_date_picker__close\" data-v-39a1f793>X</span>")]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -205,8 +204,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0c1c7b83_0", {
-    source: ".jquery_date_picker[data-v-0c1c7b83]{position:relative}.jquery_date_picker__close[data-v-0c1c7b83]{position:absolute;right:10px;cursor:pointer}",
+  inject("data-v-39a1f793_0", {
+    source: ".jquery_date_picker[data-v-39a1f793]{position:relative}.jquery_date_picker__close[data-v-39a1f793]{position:absolute;right:10px;cursor:pointer}",
     map: undefined,
     media: undefined
   });
@@ -214,10 +213,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-0c1c7b83";
+var __vue_scope_id__ = "data-v-39a1f793";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-0c1c7b83";
+var __vue_module_identifier__ = "data-v-39a1f793";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

@@ -12,7 +12,6 @@
 //
 //
 //
-const $ = window.jQuery;
 var script = {
   name: 'date-picker',
   props: {
@@ -234,8 +233,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-0c1c7b83_0", {
-    source: ".jquery_date_picker[data-v-0c1c7b83]{position:relative}.jquery_date_picker__close[data-v-0c1c7b83]{position:absolute;right:10px;cursor:pointer}",
+  inject("data-v-39a1f793_0", {
+    source: ".jquery_date_picker[data-v-39a1f793]{position:relative}.jquery_date_picker__close[data-v-39a1f793]{position:absolute;right:10px;cursor:pointer}",
     map: undefined,
     media: undefined
   });
@@ -243,7 +242,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-0c1c7b83";
+const __vue_scope_id__ = "data-v-39a1f793";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
