@@ -1,8 +1,12 @@
 {
   "name": "vue2-datepicker-jquery",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
-  "homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
+	"homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
+	"repository": {
+		"type" : "git",
+		"url" : "https://github.com/npm/cli.git"
+	},
   "main": "dist/vue2-datepicker-jquery.ssr.js",
   "browser": "dist/vue2-datepicker-jquery.esm.js",
   "module": "dist/vue2-datepicker-jquery.esm.js",
