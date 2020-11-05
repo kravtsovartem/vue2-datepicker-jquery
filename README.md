@@ -37,7 +37,7 @@ require("jquery-ui-dist/jquery-ui.min.css")
 ...
 ```
 
-app.vue
+App.vue
 
 ```html
 <template>
@@ -63,6 +63,36 @@ app.vue
     },
   }
 </script>
+```
+
+..or CDN..
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<script src="https://unpkg.com/jquery" ></script>
+		<script src="https://unpkg.com/jqueryui" ></script>
+		<link rel="stylesheet" href="https://unpkg.com/jqueryui/jquery-ui.css" />
+		<script src="https://unpkg.com/vue"></script>
+		<script src="https://unpkg.com/vue2-datepicker-jquery"></script>
+	</head>
+  <body>
+		<div id="app">
+			<vue2-datepicker-jquery></vue2-datepicker-jquery>
+		</div>
+		
+		<script>
+			new Vue({
+				el: "#app"
+			})
+		</script>
+  </body>
+</html>
+
 ```
 
 ## Theme
