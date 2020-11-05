@@ -28,15 +28,17 @@ $ npm install vue2-datepicker-jquery jquery jquery-ui-dist --save
 ## Usage
 
 main.js
+
 ```js
 ...
-window.$ = window.JQuery = require("jquery");
-require("jquery-ui-dist/jquery-ui.min.js");
-require("jquery-ui-dist/jquery-ui.min.css");
+window.$ = window.JQuery = require("jquery")
+require("jquery-ui-dist/jquery-ui.min.js")
+require("jquery-ui-dist/jquery-ui.min.css")
 ...
 ```
 
 app.vue
+
 ```html
 <template>
   <div id="app">
@@ -48,43 +50,43 @@ app.vue
 </template>
 
 <script>
-import Vue2DatepickerJquery from 'vue2-datepicker-jquery'
+  import Vue2DatepickerJquery from 'vue2-datepicker-jquery'
 
-export default {
-  name: 'App',
-  components: { Vue2DatepickerJquery },
-  data () {
-    return {
-      date: new Date().toLocaleDateString(),
-      format: 'yy.mm.dd'
-    }
-  },
-}
+  export default {
+    name: 'App',
+    components: { Vue2DatepickerJquery },
+    data() {
+      return {
+        date: new Date().toLocaleDateString(),
+        format: 'yy.mm.dd',
+      }
+    },
+  }
 </script>
 ```
 
 ## Theme
+
 Rewriting jquery-ui.css
 
 ## Internationalization
+
 So far only Russian
 
 ### Props
 
-| Prop                | Description                                      | Type                                        | Default        |
-| ------------------- | ------------------------------------------------ | ------------------------------------------- | -------------- |
-| value               | '20.12.2020'  						                       | `String`                                    | 'date'         |
-| date-format         | to set the date format                           | `String`                                    | 'dd.mm.yy'     |
-| change-month        | possibility of changing the month                | `Boolean`                            			 | 'false'   			|
-| change-year         | possibility of changing the year                 | `Boolean`                       						 | 'false'        |
-| first-day           | first day week                                   | `Number`                 								   | 1         			|
-
-
+| Prop         | Description                       | Type      | Default    |
+| ------------ | --------------------------------- | --------- | ---------- |
+| value        | '20.12.2020'                      | `String`  | 'date'     |
+| date-format  | to set the date format            | `String`  | 'dd.mm.yy' |
+| change-month | possibility of changing the month | `Boolean` | 'false'    |
+| change-year  | possibility of changing the year  | `Boolean` | 'false'    |
+| first-day    | first day week                    | `Number`  | 1          |
 
 ### Events
 
-| Name            | Description                                                                        | Callback Arguments                                                                                                       |
-| --------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| input           | When the value change(v-model event)                                               | date                                                                       
+| Name  | Description                          | Callback Arguments |
+| ----- | ------------------------------------ | ------------------ |
+| input | When the value change(v-model event) | date               |
 
 Copyright (c) 2020-present kravtsovartem
