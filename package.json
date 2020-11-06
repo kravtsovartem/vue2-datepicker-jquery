@@ -24,7 +24,8 @@
 		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
 		"commit": "git add . && git commit -m \"update\"",
     "predeploy": "npm run build && npm run commit && git push origin master",
-    "deploy": "gh-pages -d demo"
+		"deploy": "gh-pages -d demo",
+		"publish": "npm run deploy && "
   },
   "dependencies": {},
   "devDependencies": {
