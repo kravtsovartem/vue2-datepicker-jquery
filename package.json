@@ -1,6 +1,6 @@
 {
   "name": "vue2-datepicker-jquery",
-  "version": "1.1.2",
+  "version": "1.1.1",
   "description": "",
   "homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
   "repository": {
@@ -25,7 +25,7 @@
     "commit": "git add . && git commit -m \"update\"",
     "predeploy": "npm run build && npm run commit && git push origin master",
     "deploy": "gh-pages -d demo",
-    "publish": "npm run deploy && "
+    "publish": "npm run deploy && npm version patch && npm publish"
   },
   "dependencies": {},
   "devDependencies": {
