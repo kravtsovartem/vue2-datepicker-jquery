@@ -1,6 +1,6 @@
 {
   "name": "vue2-datepicker-jquery",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
   "repository": {
@@ -21,11 +21,11 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-		"commit": "git add . && git commit -m \"update\"",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "commit": "git add . && git commit -m \"update\"",
     "predeploy": "npm run build && npm run commit && git push origin master",
-		"deploy": "gh-pages -d demo",
-		"publish": "npm run deploy && "
+    "deploy": "gh-pages -d demo",
+    "publish": "npm run deploy && "
   },
   "dependencies": {},
   "devDependencies": {
