@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
 </a>
 
+
 ## Demo
 
 <https://kravtsovartem.github.io/vue2-datepicker-jquery/>
