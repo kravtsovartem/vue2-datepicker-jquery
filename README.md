@@ -32,7 +32,7 @@ main.js
 ```js
 ...
 window.$ = window.JQuery = require("jquery")
-require("jquery-ui-dist/jquery-ui.min.js")
+require("jquery-ui-dist/jquery-ui.min.js") // Or require('jquery-ui/ui/widgets/datepicker')
 require("jquery-ui-dist/jquery-ui.min.css")
 ...
 ```
@@ -44,8 +44,9 @@ App.vue
   <div id="app">
     <vue2-datepicker-jquery
       v-model="date"
-      :dateFormat="format"
-    ></vue2-datepicker-jquery>
+      :locale="locale"
+      :options="options"
+    />
   </div>
 </template>
 
@@ -57,8 +58,14 @@ App.vue
     components: { Vue2DatepickerJquery },
     data() {
       return {
+        options: {
+          firstDay: 1,
+          changeYear: true,
+          changeMonth: true,
+          dateFormat: 'yy.mm.dd',
+        },
+        locale: 'ru',
         date: new Date().toLocaleDateString(),
-        format: 'yy.mm.dd',
       }
     },
   }
@@ -109,17 +116,20 @@ Rewriting jquery-ui.css
 
 ## Internationalization
 
-So far only Russian
+```html
+<vue2-datepicker-jquery
+  v-model="date"
+  locale="ru"
+></vue2-datepicker-jquery>
+```
 
 ### Props
 
-| Prop         | Description                       | Type      | Default    |
-| ------------ | --------------------------------- | --------- | ---------- |
-| value        | '20.12.2020'                      | `String`  | 'date'     |
-| date-format  | to set the date format            | `String`  | 'dd.mm.yy' |
-| change-month | possibility of changing the month | `Boolean` | 'false'    |
-| change-year  | possibility of changing the year  | `Boolean` | 'false'    |
-| first-day    | first day week                    | `Number`  | 1          |
+| Prop    | Description                          | Type     | Default |
+| ------- | ------------------------------------ | -------- | ------- |
+| value   | '20.12.2020'                         | `String` | 'date'  |
+| locale  | localization: ru, en                 | `String` | 'en'    |
+| options | https://api.jqueryui.com/datepicker/ | `String` | {}      |
 
 ### Events
 

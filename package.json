@@ -1,13 +1,13 @@
 {
   "name": "vue2-datepicker-jquery",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "",
-	"homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
-	"repository": {
-		"type" : "git",
-		"url" : "https://github.com/kravtsovartem/vue2-datepicker-jquery.git"
-	},
-	"license": "MIT",
+  "homepage": "https://kravtsovartem.github.io/vue2-datepicker-jquery/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kravtsovartem/vue2-datepicker-jquery.git"
+  },
+  "license": "MIT",
   "main": "dist/vue2-datepicker-jquery.ssr.js",
   "browser": "dist/vue2-datepicker-jquery.esm.js",
   "module": "dist/vue2-datepicker-jquery.esm.js",
@@ -36,6 +36,9 @@
     "@vue/cli-service": "^4.3.1",
     "cross-env": "^7.0.2",
     "gh-pages": "^3.1.0",
+    "jquery": "^3.5.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
     "minimist": "^1.2.5",
     "rollup": "^2.7.3",
     "rollup-plugin-babel": "^4.4.0",

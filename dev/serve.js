@@ -1,8 +1,12 @@
-import Vue from 'vue';
-import Dev from './serve.vue';
+import Vue from 'vue'
+window.$ = window.JQuery = require('jquery')
+require('jquery-ui/ui/widgets/datepicker')
+require('jquery-ui-dist/jquery-ui.min.css')
 
-Vue.config.productionTip = false;
+import Dev from './serve.vue'
+
+Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(Dev),
-}).$mount('#app');
+  render: h => h(Dev),
+}).$mount('#app')
