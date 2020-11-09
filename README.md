@@ -138,4 +138,5 @@ Rewriting jquery-ui.css
 | input | When the value change(v-model event) | date               |
 
 Copyright (c) 2020-present kravtsovartem
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkravtsovartem%2Fvue2-datepicker-jquery.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkravtsovartem%2Fvue2-datepicker-jquery?ref=badge_shield)
