@@ -32,7 +32,8 @@ main.js
 ```js
 ...
 window.$ = window.JQuery = require("jquery")
-require("jquery-ui-dist/jquery-ui.min.js") // Or npm i jquery-ui And require('jquery-ui/ui/widgets/datepicker') (more small bundle)
+require("jquery-ui-dist/jquery-ui.min.js")
+// Or npm i jquery-ui And require('jquery-ui/ui/widgets/datepicker') (more small bundle)
 require("jquery-ui-dist/jquery-ui.min.css")
 ...
 ```
