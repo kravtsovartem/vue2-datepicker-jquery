@@ -98,12 +98,26 @@ App.vue
   </head>
   <body>
     <div id="app">
-      <vue2-datepicker-jquery></vue2-datepicker-jquery>
+      <vue2-datepicker-jquery
+        v-model="date"
+        :locale="locale"
+        :options="options"
+      />
     </div>
 
     <script>
       new Vue({
         el: '#app',
+        data: {
+          options: {
+            firstDay: 1,
+            changeYear: true,
+            changeMonth: true,
+            dateFormat: 'yy.mm.dd',
+          },
+          locale: 'ru',
+          date: new Date().toLocaleDateString(),
+        },
       })
     </script>
   </body>
