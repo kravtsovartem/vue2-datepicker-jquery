@@ -133,7 +133,7 @@ Rewriting jquery-ui.css
 ```html
 <vue2-datepicker-jquery
   v-model="date"
-  locale="ru"
+  locale="en"
 ></vue2-datepicker-jquery>
 ```
 
